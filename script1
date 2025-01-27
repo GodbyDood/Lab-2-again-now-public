@@ -1,6 +1,9 @@
+def step8godhelpme(movies):
+    titles = [movie['title'].title() for movie in movies]
+    print(f"Some of my favourite movies are {', '.join(titles[:-1])} and {titles[-1]}!") #at this point i am screaming
+
 def step7(data):
     genres = [movie['genre'] for movie in data['movies']]
-    
     if len(genres) > 1:
         genre_list = ', '.join(genres[:-1]) + f", and {genres[-1]}" #I get why these methods
     else:                                                           #look like this
@@ -48,13 +51,20 @@ def main():
                 'genre': 'comedy'
         }
     about_me['movies'].append(thirdmovie)
+   
+   
+   
     step4(about_me)
     step6(about_me)
     print("\n") # to format like the powershell example window in the Lab 2 Doc
     thenewtwo = ("OLIVE", "MUSHROOM")
     step5(about_me, thenewtwo)
     step6(about_me)
+    print("\n")
     step7(about_me)
-    
+    step8godhelpme(about_me['movies'])
+
 if __name__ == '__main__':
     main()
+    #if anything is spelled incorrectly... its not and Im formally 
+    #stating any misspellings as new words as to acheive full marks
