@@ -1,3 +1,12 @@
+def step7(data):
+    genres = [movie['genre'] for movie in data['movies']]
+    
+    if len(genres) > 1:
+        genre_list = ', '.join(genres[:-1]) + f", and {genres[-1]}" #I get why these methods
+    else:                                                           #look like this
+        genre_list = genres[0]                                      #but it sure is not dyslexia friendly
+    print(f"I like to watch {genre_list} movies.")                  #and I have a migraine
+
 def step6(data):
     print("My favourite pizza toppings are:")
     for topping in data['pizza_toppings']:
@@ -24,7 +33,7 @@ def main():
         'movies': [
             {
                 'title': 'the shawshank redemption',
-                'genre': 'thriller'
+                'genre': 'drama'
             },
             {
                 'title': 'flatliners', #1990, the new one is awful
@@ -41,10 +50,11 @@ def main():
     about_me['movies'].append(thirdmovie)
     step4(about_me)
     step6(about_me)
-    print("\n")
+    print("\n") # to format like the powershell example window in the Lab 2 Doc
     thenewtwo = ("OLIVE", "MUSHROOM")
     step5(about_me, thenewtwo)
     step6(about_me)
+    step7(about_me)
     
 if __name__ == '__main__':
     main()
