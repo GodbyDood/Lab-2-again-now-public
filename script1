@@ -12,10 +12,14 @@ def main():
                 'genre': 'thriller'
             }
         ],
-        'pizza_toppings': ['SAUSAGE', 'TOMATO', 'BACON CRUMBLE']
+        'pizza_toppings': {"SAUSAGE", "TOMATO","BACON CRUMBLE"}
+        
     }
-
-
+    thirdmovie = {
+            'title': 'life of brian',
+                'genre': 'comedy'
+        }
+    about_me['movies'].append(thirdmovie)
 
 
 if __name__ == '__main__':
