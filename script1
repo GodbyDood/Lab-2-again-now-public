@@ -1,5 +1,19 @@
 def main():
-    return
+    about_me = {
+        'full_name': 'Alexander Godby',
+        'student_id': 10266239,
+        'movies': [
+            {
+                'title': 'the shawshank redemption',
+                'genre': 'thriller'
+            },
+            {
+                'title': 'flatliners', #1990, the new one is awful
+                'genre': 'thriller'
+            }
+        ],
+        'pizza_toppings': ['SAUSAGE', 'TOMATO', 'BACON CRUMBLE']
+    }
 
 
 
