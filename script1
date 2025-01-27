@@ -1,3 +1,10 @@
+def step5(data, thenewtwo):
+    toppings = list(data['pizza_toppings'])
+    toppings.extend(thenewtwo)
+    toppings = [topping.lower() for topping in toppings]
+    toppings.sort()
+    data['pizza_toppings'] = toppings
+
 def step4(data):
     namename = data['full_name']
     first_name = namename.split()[0]
@@ -27,7 +34,9 @@ def main():
                 'genre': 'comedy'
         }
     about_me['movies'].append(thirdmovie)
+    thenewtwo = ("PEPPERONI", "MUSHROOM")
+    step5(about_me, thenewtwo)
     step4(about_me)
-
+    print("Updated pizza toppings:", about_me['pizza_toppings'])
 if __name__ == '__main__':
     main()
