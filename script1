@@ -1,3 +1,8 @@
+def step6(data):
+    print("My favourite pizza toppings are:")
+    for topping in data['pizza_toppings']:
+        print(f"- {topping}")
+
 def step5(data, thenewtwo):
     toppings = list(data['pizza_toppings'])
     toppings.extend(thenewtwo)
@@ -10,7 +15,7 @@ def step4(data):
     first_name = namename.split()[0]
     id = data['student_id']
     print(f"My name is {namename}, but you can call me Sir {first_name}.")
-    print(f"My student ID is {id}.")
+    print(f"My student ID is {id}.\n")
 
 def main():
     about_me = {
@@ -34,9 +39,12 @@ def main():
                 'genre': 'comedy'
         }
     about_me['movies'].append(thirdmovie)
-    thenewtwo = ("PEPPERONI", "MUSHROOM")
-    step5(about_me, thenewtwo)
     step4(about_me)
-    print("Updated pizza toppings:", about_me['pizza_toppings'])
+    step6(about_me)
+    print("\n")
+    thenewtwo = ("OLIVE", "MUSHROOM")
+    step5(about_me, thenewtwo)
+    step6(about_me)
+    
 if __name__ == '__main__':
     main()
